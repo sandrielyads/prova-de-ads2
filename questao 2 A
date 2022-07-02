@@ -1,0 +1,19 @@
+ef caractere_p(o):
+    return ord(o) - 96
+
+def somaLetras(z):
+    valor = 0
+
+    for i in z:
+        if(i.isdigit()):
+            valor += int(i)
+
+        else:
+            valor += caractere_p(i)
+
+    return valor
+
+z = str(input("S: ")).lower().strip()
+print()
+
+print(somaLetras(z))
